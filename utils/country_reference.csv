@@ -1,0 +1,250 @@
+country_code,country_name,target_table
+AFG,Afghanistan,silver.member_afghanistan
+ALB,Albania,silver.member_albania
+DZA,Algeria,silver.member_algeria
+ASM,American Samoa,silver.member_american_samoa
+AND,Andorra,silver.member_andorra
+AGO,Angola,silver.member_angola
+AIA,Anguilla,silver.member_anguilla
+ATA,Antarctica,silver.member_antarctica
+ATG,Antigua and Barbuda,silver.member_antigua_and_barbuda
+ARG,Argentina,silver.member_argentina
+ARM,Armenia,silver.member_armenia
+ABW,Aruba,silver.member_aruba
+AUS,Australia,silver.member_australia
+AUT,Austria,silver.member_austria
+AZE,Azerbaijan,silver.member_azerbaijan
+BHS,Bahamas,silver.member_bahamas
+BHR,Bahrain,silver.member_bahrain
+BGD,Bangladesh,silver.member_bangladesh
+BRB,Barbados,silver.member_barbados
+BLR,Belarus,silver.member_belarus
+BEL,Belgium,silver.member_belgium
+BLZ,Belize,silver.member_belize
+BEN,Benin,silver.member_benin
+BMU,Bermuda,silver.member_bermuda
+BTN,Bhutan,silver.member_bhutan
+BOL,Bolivia,silver.member_bolivia
+BES,"Bonaire, Sint Eustatius and Saba",silver.member_bonaire_sint_eustatius_and_saba
+BIH,Bosnia and Herzegovina,silver.member_bosnia_and_herzegovina
+BWA,Botswana,silver.member_botswana
+BVT,Bouvet Island,silver.member_bouvet_island
+BRA,Brazil,silver.member_brazil
+IOT,British Indian Ocean Territory,silver.member_british_indian_ocean_territory
+BRN,Brunei Darussalam,silver.member_brunei_darussalam
+BGR,Bulgaria,silver.member_bulgaria
+BFA,Burkina Faso,silver.member_burkina_faso
+BDI,Burundi,silver.member_burundi
+CPV,Cabo Verde,silver.member_cabo_verde
+KHM,Cambodia,silver.member_cambodia
+CMR,Cameroon,silver.member_cameroon
+CAN,Canada,silver.member_canada
+CYM,Cayman Islands,silver.member_cayman_islands
+CAF,Central African Republic,silver.member_central_african_republic
+TCD,Chad,silver.member_chad
+CHL,Chile,silver.member_chile
+CHN,China,silver.member_china
+CXR,Christmas Island,silver.member_christmas_island
+CCK,Cocos (Keeling) Islands,silver.member_cocos_keeling_islands
+COL,Colombia,silver.member_colombia
+COM,Comoros,silver.member_comoros
+COG,Congo,silver.member_congo
+COD,"Congo, The Democratic Republic of the",silver.member_congo_the_democratic_republic_of_the
+COK,Cook Islands,silver.member_cook_islands
+CRI,Costa Rica,silver.member_costa_rica
+HRV,Croatia,silver.member_croatia
+CUB,Cuba,silver.member_cuba
+CUW,Curaçao,silver.member_curacao
+CYP,Cyprus,silver.member_cyprus
+CZE,Czechia,silver.member_czechia
+CIV,Côte d'Ivoire,silver.member_cote_d_ivoire
+DNK,Denmark,silver.member_denmark
+DJI,Djibouti,silver.member_djibouti
+DMA,Dominica,silver.member_dominica
+DOM,Dominican Republic,silver.member_dominican_republic
+ECU,Ecuador,silver.member_ecuador
+EGY,Egypt,silver.member_egypt
+SLV,El Salvador,silver.member_el_salvador
+GNQ,Equatorial Guinea,silver.member_equatorial_guinea
+ERI,Eritrea,silver.member_eritrea
+EST,Estonia,silver.member_estonia
+SWZ,Eswatini,silver.member_eswatini
+ETH,Ethiopia,silver.member_ethiopia
+FLK,Falkland Islands (Malvinas),silver.member_falkland_islands_malvinas
+FRO,Faroe Islands,silver.member_faroe_islands
+FJI,Fiji,silver.member_fiji
+FIN,Finland,silver.member_finland
+FRA,France,silver.member_france
+GUF,French Guiana,silver.member_french_guiana
+PYF,French Polynesia,silver.member_french_polynesia
+ATF,French Southern Territories,silver.member_french_southern_territories
+GAB,Gabon,silver.member_gabon
+GMB,Gambia,silver.member_gambia
+GEO,Georgia,silver.member_georgia
+DEU,Germany,silver.member_germany
+GHA,Ghana,silver.member_ghana
+GIB,Gibraltar,silver.member_gibraltar
+GRC,Greece,silver.member_greece
+GRL,Greenland,silver.member_greenland
+GRD,Grenada,silver.member_grenada
+GLP,Guadeloupe,silver.member_guadeloupe
+GUM,Guam,silver.member_guam
+GTM,Guatemala,silver.member_guatemala
+GGY,Guernsey,silver.member_guernsey
+GIN,Guinea,silver.member_guinea
+GNB,Guinea-Bissau,silver.member_guinea_bissau
+GUY,Guyana,silver.member_guyana
+HTI,Haiti,silver.member_haiti
+HMD,Heard Island and McDonald Islands,silver.member_heard_island_and_mcdonald_islands
+VAT,Holy See (Vatican City State),silver.member_holy_see_vatican_city_state
+HND,Honduras,silver.member_honduras
+HKG,Hong Kong,silver.member_hong_kong
+HUN,Hungary,silver.member_hungary
+ISL,Iceland,silver.member_iceland
+IND,India,silver.member_india
+IDN,Indonesia,silver.member_indonesia
+IRN,Iran,silver.member_iran
+IRQ,Iraq,silver.member_iraq
+IRL,Ireland,silver.member_ireland
+IMN,Isle of Man,silver.member_isle_of_man
+ISR,Israel,silver.member_israel
+ITA,Italy,silver.member_italy
+JAM,Jamaica,silver.member_jamaica
+JPN,Japan,silver.member_japan
+JEY,Jersey,silver.member_jersey
+JOR,Jordan,silver.member_jordan
+KAZ,Kazakhstan,silver.member_kazakhstan
+KEN,Kenya,silver.member_kenya
+KIR,Kiribati,silver.member_kiribati
+KWT,Kuwait,silver.member_kuwait
+KGZ,Kyrgyzstan,silver.member_kyrgyzstan
+LAO,Laos,silver.member_laos
+LVA,Latvia,silver.member_latvia
+LBN,Lebanon,silver.member_lebanon
+LSO,Lesotho,silver.member_lesotho
+LBR,Liberia,silver.member_liberia
+LBY,Libya,silver.member_libya
+LIE,Liechtenstein,silver.member_liechtenstein
+LTU,Lithuania,silver.member_lithuania
+LUX,Luxembourg,silver.member_luxembourg
+MAC,Macao,silver.member_macao
+MDG,Madagascar,silver.member_madagascar
+MWI,Malawi,silver.member_malawi
+MYS,Malaysia,silver.member_malaysia
+MDV,Maldives,silver.member_maldives
+MLI,Mali,silver.member_mali
+MLT,Malta,silver.member_malta
+MHL,Marshall Islands,silver.member_marshall_islands
+MTQ,Martinique,silver.member_martinique
+MRT,Mauritania,silver.member_mauritania
+MUS,Mauritius,silver.member_mauritius
+MYT,Mayotte,silver.member_mayotte
+MEX,Mexico,silver.member_mexico
+FSM,"Micronesia, Federated States of",silver.member_micronesia_federated_states_of
+MDA,Moldova,silver.member_moldova
+MCO,Monaco,silver.member_monaco
+MNG,Mongolia,silver.member_mongolia
+MNE,Montenegro,silver.member_montenegro
+MSR,Montserrat,silver.member_montserrat
+MAR,Morocco,silver.member_morocco
+MOZ,Mozambique,silver.member_mozambique
+MMR,Myanmar,silver.member_myanmar
+NAM,Namibia,silver.member_namibia
+NRU,Nauru,silver.member_nauru
+NPL,Nepal,silver.member_nepal
+NLD,Netherlands,silver.member_netherlands
+NCL,New Caledonia,silver.member_new_caledonia
+NZL,New Zealand,silver.member_new_zealand
+NIC,Nicaragua,silver.member_nicaragua
+NER,Niger,silver.member_niger
+NGA,Nigeria,silver.member_nigeria
+NIU,Niue,silver.member_niue
+NFK,Norfolk Island,silver.member_norfolk_island
+PRK,North Korea,silver.member_north_korea
+MKD,North Macedonia,silver.member_north_macedonia
+MNP,Northern Mariana Islands,silver.member_northern_mariana_islands
+NOR,Norway,silver.member_norway
+OMN,Oman,silver.member_oman
+PAK,Pakistan,silver.member_pakistan
+PLW,Palau,silver.member_palau
+PSE,"Palestine, State of",silver.member_palestine_state_of
+PAN,Panama,silver.member_panama
+PNG,Papua New Guinea,silver.member_papua_new_guinea
+PRY,Paraguay,silver.member_paraguay
+PER,Peru,silver.member_peru
+PHL,Philippines,silver.member_philippines
+PCN,Pitcairn,silver.member_pitcairn
+POL,Poland,silver.member_poland
+PRT,Portugal,silver.member_portugal
+PRI,Puerto Rico,silver.member_puerto_rico
+QAT,Qatar,silver.member_qatar
+ROU,Romania,silver.member_romania
+RUS,Russian Federation,silver.member_russian_federation
+RWA,Rwanda,silver.member_rwanda
+REU,Réunion,silver.member_reunion
+BLM,Saint Barthélemy,silver.member_saint_barthelemy
+SHN,"Saint Helena, Ascension and Tristan da Cunha",silver.member_saint_helena_ascension_and_tristan_da_cunha
+KNA,Saint Kitts and Nevis,silver.member_saint_kitts_and_nevis
+LCA,Saint Lucia,silver.member_saint_lucia
+MAF,Saint Martin (French part),silver.member_saint_martin_french_part
+SPM,Saint Pierre and Miquelon,silver.member_saint_pierre_and_miquelon
+VCT,Saint Vincent and the Grenadines,silver.member_saint_vincent_and_the_grenadines
+WSM,Samoa,silver.member_samoa
+SMR,San Marino,silver.member_san_marino
+STP,Sao Tome and Principe,silver.member_sao_tome_and_principe
+SAU,Saudi Arabia,silver.member_saudi_arabia
+SEN,Senegal,silver.member_senegal
+SRB,Serbia,silver.member_serbia
+SYC,Seychelles,silver.member_seychelles
+SLE,Sierra Leone,silver.member_sierra_leone
+SGP,Singapore,silver.member_singapore
+SXM,Sint Maarten (Dutch part),silver.member_sint_maarten_dutch_part
+SVK,Slovakia,silver.member_slovakia
+SVN,Slovenia,silver.member_slovenia
+SLB,Solomon Islands,silver.member_solomon_islands
+SOM,Somalia,silver.member_somalia
+ZAF,South Africa,silver.member_south_africa
+SGS,South Georgia and the South Sandwich Islands,silver.member_south_georgia_and_the_south_sandwich_islands
+KOR,South Korea,silver.member_south_korea
+SSD,South Sudan,silver.member_south_sudan
+ESP,Spain,silver.member_spain
+LKA,Sri Lanka,silver.member_sri_lanka
+SDN,Sudan,silver.member_sudan
+SUR,Suriname,silver.member_suriname
+SJM,Svalbard and Jan Mayen,silver.member_svalbard_and_jan_mayen
+SWE,Sweden,silver.member_sweden
+CHE,Switzerland,silver.member_switzerland
+SYR,Syria,silver.member_syria
+TWN,Taiwan,silver.member_taiwan
+TJK,Tajikistan,silver.member_tajikistan
+TZA,Tanzania,silver.member_tanzania
+THA,Thailand,silver.member_thailand
+TLS,Timor-Leste,silver.member_timor_leste
+TGO,Togo,silver.member_togo
+TKL,Tokelau,silver.member_tokelau
+TON,Tonga,silver.member_tonga
+TTO,Trinidad and Tobago,silver.member_trinidad_and_tobago
+TUN,Tunisia,silver.member_tunisia
+TKM,Turkmenistan,silver.member_turkmenistan
+TCA,Turks and Caicos Islands,silver.member_turks_and_caicos_islands
+TUV,Tuvalu,silver.member_tuvalu
+TUR,Türkiye,silver.member_turkiye
+UGA,Uganda,silver.member_uganda
+UKR,Ukraine,silver.member_ukraine
+ARE,United Arab Emirates,silver.member_united_arab_emirates
+GBR,United Kingdom,silver.member_united_kingdom
+USA,United States,silver.member_united_states
+UMI,United States Minor Outlying Islands,silver.member_united_states_minor_outlying_islands
+URY,Uruguay,silver.member_uruguay
+UZB,Uzbekistan,silver.member_uzbekistan
+VUT,Vanuatu,silver.member_vanuatu
+VEN,Venezuela,silver.member_venezuela
+VNM,Vietnam,silver.member_vietnam
+VGB,"Virgin Islands, British",silver.member_virgin_islands_british
+VIR,"Virgin Islands, U.S.",silver.member_virgin_islands_u_s
+WLF,Wallis and Futuna,silver.member_wallis_and_futuna
+ESH,Western Sahara,silver.member_western_sahara
+YEM,Yemen,silver.member_yemen
+ZMB,Zambia,silver.member_zambia
+ZWE,Zimbabwe,silver.member_zimbabwe
+ALA,Åland Islands,silver.member_aland_islands
