@@ -115,11 +115,20 @@ def trim_and_rename_bronze_columns(bronze_df: DataFrame) -> DataFrame:
 
 
 def parse_strict_date(text_column: Column) -> Column:
-    """Text -> DATE, or NULL when the text is not exactly 8 digits or not a real calendar date."""
-    is_8_digits = text_column.rlike(r"^\d{8}$")
-    parsed_date = try_to_timestamp(text_column, lit(DATE_FORMAT)).cast("date")
-    return when(is_8_digits, parsed_date)
+    """Parse dates in ddMMyyyy, yyyyMMdd, or MMddyyyy format."""
 
+    is_8_digits = text_column.rlike(r"^\d{8}$")
+
+    parsed_ddMMyyyy = try_to_timestamp(text_column, lit("ddMMyyyy")).cast("date")
+    parsed_yyyyMMdd = try_to_timestamp(text_column, lit("yyyyMMdd")).cast("date")
+    parsed_MMddyyyy = try_to_timestamp(text_column, lit("MMddyyyy")).cast("date")
+
+    return when(
+        is_8_digits,
+        when(parsed_ddMMyyyy.isNotNull(), parsed_ddMMyyyy)
+        .when(parsed_yyyyMMdd.isNotNull(), parsed_yyyyMMdd)
+        .otherwise(parsed_MMddyyyy)
+    )
 
 def convert_text_to_types(trimmed_df: DataFrame, known_country_codes_df: DataFrame) -> DataFrame:
     """Text -> DATE / INT, and mark known country codes (adds `is_known_country`).
