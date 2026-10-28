@@ -1,4 +1,4 @@
-"""Country list, the split into one table per country, one-time backfill, reconciliation (design 5.4 / 6).
+"""Country list, the split into one table per country, one-time backfill, reconciliation .
 The MERGE statements are plain SQL strings next to the code that runs them."""
 import re
 from functools import reduce
