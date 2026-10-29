@@ -9,7 +9,7 @@ from pipeline_utils.silver.clean_and_validate_redemptions import (
     convert_text_to_types, flatten_redemptions, keep_latest_record_per_transaction,
     mark_orphan_members, trim_and_rename_bronze_columns, validate_redemptions,
 )
-from pipeline_utils.silver.country_tables import get_country_target_tables
+from pipeline_utils.silver.country_tables import MEMBER_LOOKUP_TABLE
 
 # (the tables are created by %sql cells in the notebook: rename there too)
 REDEMPTIONS_TABLE = "skypoints.silver.silver_redemptions"
@@ -33,17 +33,7 @@ WHEN NOT MATCHED THEN INSERT *
 
 
 def read_known_member_ids(session):
-    """member_id of every member already in Silver. Members live in one table per country,
-    so the country tables are read and combined (only the member_id column)."""
-    tables = sorted(set(get_country_target_tables(session).values()))
-    frames = [
-        session.table(table_name).select("member_id")
-        for table_name in tables
-        if session.catalog.tableExists(table_name)
-    ]
-    if not frames:
-        return session.createDataFrame([], "member_id STRING")
-    return reduce(lambda left, right: left.unionByName(right), frames)
+    return session.table(MEMBER_LOOKUP_TABLE).select("member_id")
 
 
 def build_reject_table_rows(rejected_df):

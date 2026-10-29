@@ -1,7 +1,7 @@
 """What runs for every micro-batch: clean, validate, reject, split. Also the reject table writer."""
 from pyspark.sql.functions import col, current_timestamp
 
-from pipeline_utils.silver.clean_and_validate import (
+from pipeline_utils.silver.clean_and_validate_member import (
     add_age_and_stale_member, convert_text_to_types, keep_latest_record_per_member,
     trim_and_rename_bronze_columns, validate_members,
 )

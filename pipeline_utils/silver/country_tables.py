@@ -172,7 +172,7 @@ def update_member_country_lookup(session, latest_df):
     A new member is inserted, a mover or a same-country member is updated."""
     _merge_with_temp_view(
         session,
-        latest_df.select("member_name", "country_code", "file_date"),
+        latest_df.select("member_name", "member_id","country_code", "file_date"),
         UPDATE_LOOKUP_SQL,
         MEMBER_LOOKUP_TABLE,
     )
@@ -194,6 +194,7 @@ def split_into_country_tables(session, latest_df, max_workers=None) -> dict:
 
     lookup_df = session.table(MEMBER_LOOKUP_TABLE).select(
         "member_name",
+        "member_id",
         col("country_code").alias("old_country_code"),
         col("file_date").alias("old_file_date"),
     )

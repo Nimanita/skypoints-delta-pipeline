@@ -1,12 +1,11 @@
-"""Clean and validate: text -> semicleaned columns, reject rules, derived columns, latest record per member
-(design 5.2 / 5.3). Pure DataFrame functions: no tables are touched here."""
+
 from pyspark.sql import Column, DataFrame
 from pyspark.sql.functions import (
     array, broadcast, col, concat_ws, datediff, expr, floor, length, lit, lpad, max_by,
     months_between, nullif, struct, to_json, trim, try_to_timestamp, when, year, current_date
 )
 
-# ---- rules from the design doc (section 5.2) -----------------------------
+# ---- rules from the design doc -----------------------------
 STALE_DAYS = 90
 DATE_FORMAT = "ddMMyyyy"
 MEMBER_KEY = "member_name"          # one silver row per this column
