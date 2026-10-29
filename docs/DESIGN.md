@@ -802,21 +802,7 @@ Each reject table is also a monitoring source: group by `reject_reason` after ev
 
 Make small incremental commits at each step so the evolution is visible in the history.
 
-## 12. Open Items and Decisions Needed
-
-| # | Topic | Detail | Proposed handling |
-|---|---|---|---|
-| 12.1 | `member_id` uniqueness (member) | The design says an ID used by two different names is rejected. The code does not do this, and the sample has `226129` for two names. It also affects the redemption join (8.2). | Decide: reject the later or both, or report only. Implement before the join is relied on. |
-| 12.2 | Letters-only format rules (member) | The code rejects `member_name`, `state` and `agent_name` values containing digits or punctuation. The sample has `MY3`, `SP1`, `Ivan Kim 3494`, `Zoë Müller 5606` and `Anne-Marie "Annie" Clarke`, which would all be rejected, including the "clean" sample row A. | Confirm whether the sample is synthetic. If so, relax to letters, digits, spaces and common punctuation, or to Unicode letters. |
-| 12.3 | Date ambiguity (member) | 8-digit values valid in two formats are read as `ddMMyyyy` first (5.3). The year upper bound uses `current_date()`. | Confirm the source formats per column and tighten, or accept and document. |
-| 12.4 | `txn_id` uniqueness (redemption) | Unknown whether `txn_id` is unique across all members. | Key stays (`member_id`, `txn_id`). Report any `txn_id` under more than one member. If the source confirms global uniqueness, reduce the key to `txn_id`. |
-| 12.5 | Negative miles | `-11500` is rejected as not positive. It could be a legitimate reversal. | Ask the source team whether reversals are sent as negative amounts. If yes, allow them for `REVERSED` and `CANCELLED`. |
-| 12.6 | Valid statuses | The allowed list holds the five values seen. `REVERSED` and `ON_HOLD` may not be genuine business statuses. | Confirm the list. It is configuration, not logic. |
-| 12.7 | `memberId` recovery | Rows with `memberId` are recovered and flagged, not rejected. | Confirm. If not approved, they are rejected with `member_id:MISSING`. |
-| 12.8 | Missing or invalid `feed_date` | The transaction is rejected, because `feed_date` drives "latest wins". | Alternative: fall back to `file_date` and flag it. Confirm. |
-| 12.9 | Field lengths for redemptions | `txn_id` 30, `partner` 100, `status` 20 are chosen limits, not from a spec. | Confirm with the source team. |
-
-## 13. Architect's Note: Are Separate Tables the Best Design?
+## 12. Architect's Note: Are Separate Tables the Best Design?
 
 **Member data.** For billions of records, physically separate country tables are not an ideal default:
 
