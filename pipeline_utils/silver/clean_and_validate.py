@@ -3,7 +3,7 @@
 from pyspark.sql import Column, DataFrame
 from pyspark.sql.functions import (
     array, broadcast, col, concat_ws, datediff, expr, floor, length, lit, lpad, max_by,
-    months_between, nullif, struct, to_json, trim, try_to_timestamp, when,
+    months_between, nullif, struct, to_json, trim, try_to_timestamp, when, year, current_date
 )
 
 # ---- rules from the design doc (section 5.2) -----------------------------
@@ -11,6 +11,8 @@ STALE_DAYS = 90
 DATE_FORMAT = "ddMMyyyy"
 MEMBER_KEY = "member_name"          # one silver row per this column
 
+MIN_YEAR = 1900  
+# adjust to your data
 # maximum length of each column
 MAX_LEN = {
     "member_name": 255,
@@ -114,22 +116,31 @@ def trim_and_rename_bronze_columns(bronze_df: DataFrame) -> DataFrame:
     return bronze_df.select(columns)
 
 
+
+def valid_year(parsed: Column) -> Column:
+    """Keep the parsed date only if its year is in a same range."""
+    return when(
+        year(parsed).between(MIN_YEAR, year(current_date())),
+        parsed,
+    )
+
 def parse_strict_date(text_column: Column) -> Column:
     """Parse dates in ddMMyyyy, yyyyMMdd, or MMddyyyy format."""
 
     is_8_digits = text_column.rlike(r"^\d{8}$")
 
-    parsed_ddMMyyyy = try_to_timestamp(text_column, lit("ddMMyyyy")).cast("date")
-    parsed_yyyyMMdd = try_to_timestamp(text_column, lit("yyyyMMdd")).cast("date")
-    parsed_MMddyyyy = try_to_timestamp(text_column, lit("MMddyyyy")).cast("date")
+    parsed_ddMMyyyy = valid_year(try_to_timestamp(text_column, lit("ddMMyyyy")).cast("date"))
+    parsed_yyyyMMdd = valid_year(try_to_timestamp(text_column, lit("yyyyMMdd")).cast("date"))
+    parsed_MMddyyyy = valid_year(try_to_timestamp(text_column, lit("MMddyyyy")).cast("date"))
 
-    return when(
-        is_8_digits,
-        when(parsed_ddMMyyyy.isNotNull(), parsed_ddMMyyyy)
-        .when(parsed_yyyyMMdd.isNotNull(), parsed_yyyyMMdd)
-        .otherwise(parsed_MMddyyyy)
+    return (
+        when(
+            is_8_digits,
+            when(parsed_ddMMyyyy.isNotNull(), parsed_ddMMyyyy)
+            .when(parsed_yyyyMMdd.isNotNull(), parsed_yyyyMMdd)
+            .when(parsed_MMddyyyy.isNotNull(), parsed_MMddyyyy)
+        )
     )
-
 def convert_text_to_types(trimmed_df: DataFrame, known_country_codes_df: DataFrame) -> DataFrame:
     """Text -> DATE / INT, and mark known country codes (adds `is_known_country`).
     A value that cannot be converted becomes NULL; validate_members() rejects the row
