@@ -203,7 +203,7 @@ def split_into_country_tables(session, latest_df, max_workers=None) -> dict:
     #    Persisted and counted BEFORE the lookup changes (the lookup is part of this plan).
     applicable_df = (
         latest_df
-        .join(lookup_df, "member_name", "left")
+        .join(lookup_df, ["member_name" , "member_id"], "left")
         .where(col("old_file_date").isNull() | (col("file_date") >= col("old_file_date")))
         .persist(StorageLevel.MEMORY_AND_DISK)
     )
